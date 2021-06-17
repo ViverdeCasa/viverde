@@ -1,11 +1,12 @@
 <Doctype html>
-    <html lang="pt-br">
+<html lang="pt-br">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/e3a74b083e.js" crossorigin="anonymous"></script>
   <link rel="stylesheet"  href="site_viverde.css"/>
+  
   <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
   <script>
   Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
@@ -15,6 +16,7 @@
     'c0eLHfi7gAQhHY8VBcHlfJEWcDgyaKDtcNs6E4Tt' // This is your Javascript key
   );
   </script>
+
   <title>ViverdeCasa</title>
 </head>
       <body onload="nova()">
@@ -39,7 +41,8 @@
               <a class="nav-link" href="#">Como atuamos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#pagina2">Serviços</a>
+              <a class="nav-link"  onclick="mostrar()" href="#pagina2">Serviços</a>      
+                
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Cursos</a>
@@ -57,11 +60,13 @@
           </ul>
          
         </div>
-        
       </nav>
-      
+      <div class="fixed-top" id="serv">
+        <pre class="text-center" id="demon" style="background-color: #0000;"></pre>
+      </div>
       <div align="center" id="div2">
-  
+       <div style="padding: 100px;">
+       </div>
         <h1 style="font-size: 48px;"> Está a procura de um serviços? </h1>
         <h5 style="font-size: 24px;">A Viverde está pronta para lhe atender.</h5><br>
         <a href="#pagina2"><button type="button" value="prox" button style=" background: #ED9C18; border-radius: 5px; padding: 3px; height: 35px; width: 290px; cursor: pointer; color: #F7F5F6; border: none; font-size: 18px; font-style: Questrial" > Faça já seu orçamento</button></a> 
@@ -412,9 +417,10 @@
     </div>
   </div>
 
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
   <script src="scriptoverlay.js"></script>
+
+  
   </body>
 </html>
 </Doctype>

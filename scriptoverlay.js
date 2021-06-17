@@ -243,3 +243,26 @@ const enviar = ()=>{
 
 } 
 
+
+function mostrar(){
+    let mostrar ;     
+    (async () => {
+        const Servicos = Parse.Object.extend('Servicos');
+        const query = new Parse.Query(Servicos);
+
+
+        const results = await query.find();
+    for (const object of results) {
+        // Access the Parse Object attributes using the .GET method
+        const Nome = object.get('Nome');
+        const IDservi = object.get('IDservi');
+
+        mostrar += Nome + "\n";
+        // mostrar.push(`${Nome}\n`);
+        document.getElementById("demon").innerHTML =  mostrar;
+
+    }
+    })();
+
+}
+
